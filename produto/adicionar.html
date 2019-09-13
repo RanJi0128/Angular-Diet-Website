@@ -1,0 +1,27 @@
+  <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Cadastrar um Alimento</div>
+      <div class="card-body">
+        <form name="adicionarAlimento" ng-controller="ProdutoCtrl" ng-submit='salvar(adicionarAlimento)'>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputName">Descrição</label>
+                <input class="form-control" ng-model="alimento.Descricao" id="exampleInputName" name="desc" type="text" aria-describedby="nameHelp" placeholder="Entre com o nome do Alimento" required>
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputLastName">Qtd. Carboidrato</label>
+                <input class="form-control" ng-model="alimento.Carboidrato" name="carb" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Entre com a quantidade de carboidrato do alimento" required>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" >Salvar</button>
+          <div class="msgSucesso" ng-bind="msgSucesso"> </div>
+          <div class="msgError" ng-bind="msgError"> </div>
+        </form>
+      </div>
+    </div>
+    
+
+
+  </div>

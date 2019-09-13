@@ -1,0 +1,57 @@
+<div class="card card-register mx-auto mt-5">
+  <div class="card-header">Dados do Paciente</div>
+  <div class="card-body">
+    <form ng-controller="UsuarioCtrl">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="exampleInputName">Nome</label>
+            <input class="form-control" id="exampleInputName" type="text" ng-model="usuario.Nome" aria-describedby="nameHelp" placeholder="Entre com o nome do paciente">
+          </div>
+          <div class="col-md-6">
+            <label for="exampleInputLastName">Sobrenome</label>
+            <input class="form-control" id="exampleInputLastName" type="text" ng-model="usuario.Sobrenome" aria-describedby="nameHelp" placeholder="Entre com sobrenome do paciente">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+       <div class="form-row">
+        <div class="col-md-6">
+          <label for="exampleInputCpf">Cpf</label>
+          <input class="form-control" id="exampleInputCpf" type="text" ng-model="usuario.Cpf" placeholder="Entre com o Cpf do paciente">
+        </div>
+        <div class="col-md-6">
+          <label for="exampleInputQtdInsulina">Qtd Insulina</label>
+          <input class="form-control" id="exampleInputQtdInsulina" type="text" ng-model="usuario.QtdInsulinaPorGramaCarbo" aria-describedby="nameHelp" placeholder="Qtd Insulina por grama de carboidrato.">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input class="form-control" id="exampleInputEmail1" type="email" ng-model="usuario.Email"  aria-describedby="emailHelp" placeholder="Entre com o e-mail do paciente">
+    </div>
+    <!-- <div class="form-group">
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="exampleInputPassword1">Senha</label>
+          <input class="form-control" id="exampleInputPassword1" ng-model="usuario.Senha" type="password" placeholder="Entre com a senha do paciente">
+        </div>
+        <div class="col-md-6">
+          <label for="exampleConfirmPassword">Confirme a senha</label>
+          <input class="form-control" id="exampleConfirmPassword" ng-model="confirmacaoSenha" type="password" placeholder="Confirmar senha">
+        </div>
+      </div>
+    </div>  -->
+    <div class="form-row">
+      <div class="col-md-8">
+        <button type="submit" ng-click="salvarUsuario()" class="btn btn-primary btn-block" >Salvar</button>
+      </div>
+      <div class="col-md-4">
+        <button type="submit" ng-click="desassociarPaciente()" class="btn btn-danger btn-block" ng-show="usuario.Id">Desassociar</button>
+      </div>
+    </div>
+    <div class="msgSucesso" ng-bind="msgSucesso"> </div>
+    <div class="msgError" ng-bind="msgError"> </div>
+  </form>
+</div>
+</div>

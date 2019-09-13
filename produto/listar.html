@@ -1,0 +1,38 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fa fa-table"></i> Data Table Example</div> <div class="card-body">
+      <div class="table-responsive" ng-controller='ProdutoCtrl'>
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Descrição</th>
+              <th>Qtd. Carboidrato</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Id</th>
+              <th>Descrição</th>
+              <th>Qtd. Carboidrato</th>
+              <th></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr role="row" class="odd" ng-repeat="produto in produtos track by $index" on-finish-render="chamarFunctionDataTable()">
+
+              <td>{{produto.Id}}</td>
+              <td>{{produto.Descricao}}</td>
+              <td>{{produto.Carboidrato}}</td>
+              <td align="center">
+                <a href="javascript:void(0);" class="btn btn-info btn-sm" ng-click="alterarAlimento(produto.Id)">Editar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+   
+  </div>
+</div>

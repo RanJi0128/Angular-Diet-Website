@@ -1,0 +1,37 @@
+
+
+<div class="selected-food-item ng-scope" >
+    <header><ng-include ng-if="showHeader" src="'../header.html'"></ng-include></header>
+    <header><ng-include src="'../subheader.html'"></ng-include></header>
+    <div class="row">
+        <div class="col-md-3  nav-left">
+            <header><ng-include src="'../sidebar.html'"></ng-include></header>
+        </div>
+        <div class="col-md-9 right-content" >
+          <h2>Your Food</h2>
+          <div class="food-selection">
+            <button type="button" class="remove" >
+              <span>remove</span>
+            </button>
+            <h3 title="Nuts, almonds, sliced " class="ng-binding">Nuts, almonds, sliced </h3>
+            <p class="ng-binding">132 calories | Serving Size: 0.25 Cup</p>
+          </div>
+        </div>
+
+        <div>
+          <label for="serving-amount">Amount</label>
+          <input id="serving-amount" type="number"  class="ng-pristine ng-untouched ng-valid ng-empty">
+          <label class="serving-amount" for="serving-amount">Serving(s)</label>
+        </div>
+
+        <div class="serving-image">
+          <img data-ng-src="https://img.webmd.com/dtmcms/live//webmd/consumer_assets/site_images/responsive/HandPlate.svg" src="https://img.webmd.com/dtmcms/live//webmd/consumer_assets/site_images/responsive/HandPlate.svg">
+        </div>
+      
+        <div  class="ng-scope">
+          <button type="button" class="button calc disabled" >
+            Calculate
+          </button>
+          <a class="modals-link ng-binding" >View My Totals (0 Items)</a>
+        </div>
+    </div>
