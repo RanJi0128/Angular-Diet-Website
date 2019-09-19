@@ -160,4 +160,6 @@ li.ng-scope {
 	list-style-type: none;
 	border-bottom: 1px dotted;
 	margin-bottom: 11px;
+	width: 49%;
+	display: inline-block;
 }
