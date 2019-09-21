@@ -12,7 +12,10 @@ color: red;
 
 
 /* header css */
-
+.qlqrcoisa {
+	 
+	margin-top: 140px
+}
 .header-container {
 	border-bottom: 2px solid;
 }
@@ -59,12 +62,16 @@ header .header-images {
 	margin-top: 21px;
 
 }
-
+.content-container .box-wrapper {
+	width: 75%;
+  margin: 0 auto;
+}
+.content-container .box-wrapper .left-content {
+	padding-top: 36px;
+}
 .food-selection.food-content.food-name{
-
-	margin-left: 175px;
-	margin-top: 43px;
 	color: #558b2f; 
+	text-align: right;
 }
 .food-selection button.remove {
 	border-width: 0;
@@ -120,12 +127,11 @@ header .header-images {
 	padding: .625rem;
 	margin-top: 43px;
 }
-.serving-image img {
+img.serving-image{
 	display: block;
 	height: auto;
 	margin: .625rem 0 .5rem 0;
-	width: 5.6875rem;
-	margin-left: 467px;
+	width: 100px;
 }
 .button.calc {
 	border-radius: 15px;
@@ -162,4 +168,19 @@ li.ng-scope {
 	margin-bottom: 11px;
 	width: 49%;
 	display: inline-block;
+}
+.amount{
+	text-align: right;
+	padding-top: 10px;
+  padding-right: 0px;
+
+}
+.insulin{
+
+	text-align: right;
+	padding-top: 10px;
+}
+.total{
+	padding-left: 69px;
+	padding-top: 10px;
 }
