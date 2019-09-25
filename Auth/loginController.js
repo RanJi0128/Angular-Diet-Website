@@ -87,7 +87,7 @@ app.controller('loginController', ['$scope', '$location', 'authService','Usuario
         
        // authService.login($scope.loginData).then(function (response) {
         //    $scope.msgError = "";
-            $location.path('/home'); //*********/alimento/listar
+            $location.path('/alimento/listar'); //*********/alimento/listar
        // },
        // function (err) {
        //    $scope.loginMsgError = "Usuario ou senha não encontrado!";

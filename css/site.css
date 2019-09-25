@@ -49,7 +49,11 @@ header .header-images {
 	margin-right: 36px;
 	height: 36px;
 }
-
+.greet{
+	text-align: center;
+	margin-top: 200px;
+	font-size: 50px;
+}
 .content-container {
 	padding-top: 0px;
 	padding-right: 31px;
@@ -168,6 +172,7 @@ li.ng-scope {
 	margin-bottom: 11px;
 	width: 49%;
 	display: inline-block;
+	cursor: pointer;
 }
 .amount{
 	text-align: right;
@@ -183,4 +188,10 @@ li.ng-scope {
 .total{
 	padding-left: 69px;
 	padding-top: 10px;
+}
+.remove.all-clear-btn{
+	background: white;
+	border: none;
+	font-size: 15px;
+	cursor: pointer;
 }

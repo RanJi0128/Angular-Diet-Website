@@ -1,0 +1,95 @@
+<div class="home" ng-controller="AlimentoCtrl" ng-init="init()" >
+      
+  <header><ng-include src="'../header.html'"></ng-include></header>
+  
+  <div class="content-container">
+     
+        <div class="container">
+                  <div class="row">
+                          
+                          <div class="col">
+                                  <div class="box-wrapper">
+                                          <div class="row">
+                                                  <div class="col-md-4 col-sm-4 left-content" >
+                                                          <h2 class="food-selection food-content food-name">Your<br/>Food</h2>
+                                                  </div>
+                                                  <div class="col-md-7 col-sm-7 right-content" >
+                                                          <div class="food-selection food-list">
+                                                                  <button type="button" class="remove" ng-click="delSelectFood()"><icon class="fa fa-times"></icon></button>
+                                                                  <h3 title="Your Food" class="ng-binding">{{selectFoodTitle}}</h3>
+                                                                  <p class="ng-binding">{{selectFoodCalory}}</p>
+                                                          </div>
+                                                  </div>
+                                                  <div class="col-md-1 col-sm-1"></div>
+                                           </div>
+                                  </div>
+                                          
+                          </div>
+                          
+                  </div>                     
+                  <div class="row input-mass">
+                          <div class="col-md-2 col-sm-2 amount">
+                                  <label class="saving-amount">Amount</label>
+                          </div>            
+                          <div class="col-md-2 col-sm-2">
+                                  <input id="serving-amount" type="number"  class="ng-pristine ng-untouched ng-valid ng-empty" min="0" ng-model = "calInput">
+                                  <img  class="serving-image"src="https://img.webmd.com/dtmcms/live//webmd/consumer_assets/site_images/responsive/HandPlate.svg">
+                                  <label class="serving-amount" for="serving-amount"></label>
+                          </div>
+                          <div class="col-md-2 col-sm-2 insulin">
+                                  <label class="saving-input">Insulin(U-)</label>
+                          </div>
+                          <div class="col-md-2 col-sm-2 ">
+                                  <input id="serving-amount" type="number"  class="ng-pristine ng-untouched ng-valid ng-empty" readonly value = {{calOutput()}}><br/>
+                                  
+                                  <label class="serving-amount" for="serving-amount"></label>
+                          </div>
+                          <div class="col-md-4 col-sm-4 total">
+                                  <label class="view-totals" style="width:100%">My Totals ({{selectCount}} Items)
+                                        <button type="button" class="remove all-clear-btn" ng-click="selClear()"><icon class="fa fa-times"></icon></button>
+                                  </label>
+                               
+                          </div>
+                          
+                  </div>
+                  
+                  <div class="results-area ng-scope" >
+                                  <h4 style=" margin-left: 40px; margin-top: 40px;border-bottom: 2px solid;">Select a Food</h4>
+                                  <div>
+                                          <ul>
+                                                  <li class="ng-scope" ng-repeat = "food in foods">
+                                                                  <a ng-click="selectFoodEvent($event,food.carboidrato)" >
+                                                                          <h6 class="ng-binding" >{{food._id}} </h6>
+                                                                          <p class="ng-binding">{{food.Descricao}}</p>
+                                                                  </a>
+                                                  </li>
+                                                 
+                                                  
+                                          </ul>
+                                  </div>
+                                         
+                  </div>
+                  <div class="results-area ng-scope" >
+                                  <h4 style=" margin-left: 40px; margin-top: 40px;border-bottom: 2px solid;">History Food</h4>
+                                  <div>
+                                          <ul>
+                                                  <li class="ng-scope">
+                                                          <a>
+                                                                  <h6 class="ng-binding">Nuts, almonds, sliced </h6>
+                                                                  <p class="ng-binding">132 calories | Serving Size: 0.25 Cup</p>
+                                                          </a>
+                                                          
+                                                  </li>
+                                                  
+                                          </ul>
+                                  </div>
+                  </div>
+                                   
+        </div>
+
+  </div>
+
+  
+</div> 
+
+

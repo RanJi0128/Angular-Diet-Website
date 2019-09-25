@@ -34,16 +34,20 @@ app.config(function($routeProvider)
      ,controller  : 'HomeCtrl',
      showHeader : true
   })
+  .when('/alimento/listar', {
+    templateUrl : '/alimento/listar.html',
+    controller  : 'AlimentoCtrl',
+  })
+  .when('/listarProdutos', {
+    templateUrl : '/produto/listar.html',
+    controller  : 'ProdutoCtrl',
+  })
    .when('/adicionarProduto', {
     templateUrl : '/produto/adicionar.html',
     controller  : 'ProdutoCtrl',
   })
    .when('/adicionarProduto/:id', {
     templateUrl : '/produto/adicionar.html',
-    controller  : 'ProdutoCtrl',
-  })
-   .when('/listarProdutos', {
-    templateUrl : '/produto/listar.html',
     controller  : 'ProdutoCtrl',
   })
    .when('/register', {
@@ -71,11 +75,7 @@ app.config(function($routeProvider)
     templateUrl : 'app/views/contato.html',
     controller  : 'ContatoCtrl',
   })
-  .when('/gain-muscle-mass', {
-    templateUrl: 'alimento/gain-muscle-mass.html', 
-    controller: 'GainMuscleMass',
-    showHeader : true
-  })
+  
    // caso não seja nenhum desses, redirecione para a rota '/'
    .otherwise ({ redirectTo: '/' })
  })
